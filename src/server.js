@@ -7,7 +7,7 @@ const authRoutes = require('./routes/auth.js');
 const cors = require('cors');
 
 const app = express();
-const PORT = 3443;
+const PORT = 8080;
 
 app.use(cors());
 app.use(bodyParser.json());
