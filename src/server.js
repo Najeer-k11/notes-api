@@ -7,7 +7,7 @@ const authRoutes = require('./routes/auth.js');
 const cors = require('cors');
 
 const app = express();
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -21,5 +21,5 @@ const options = {
 };
 
 https.createServer(options, app).listen(PORT, () => {
-  console.log(`✅ HTTPS server running at https://localhost:${PORT}`);
+  console.log(`✅ HTTPS server running at ${PORT}`);
 });
